@@ -1,28 +1,20 @@
-pipeline {
+properties([pipelineTriggers([githubPush()])]) {
 
-  agent { label 'linux' }
-  { 
-
-    stages {
-      
-        stage('Build Application') { 
+  node('linux') { 
+        
+		git url: 'https://github.com/Tanya123Git/SEIS-627.git', branch: 'master'
+        stage('Build Assets') { 
             steps {
                 echo 'Building Assets'
             }
         }
-      
+		
         stage('Test') {
             steps {
                 echo 'Testing stuff...'
             }
         }
 
-        post {
-          always {
-            junit 'test/Report.xml'
-            echo "test report have been generated"
-            }
-        }
+        
      }
-   }
-}
+ }
