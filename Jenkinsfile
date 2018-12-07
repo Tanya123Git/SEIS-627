@@ -1,10 +1,10 @@
 pipeline {
 
-  'agent any'
+  agent { label 'linux' }
   { 
 
     stages {
-        stage('Build Assets') { 
+        stage('Build Application') { 
             steps {
                 echo 'Building Assets'
             }
