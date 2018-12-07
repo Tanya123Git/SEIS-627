@@ -1,9 +1,11 @@
 pipeline {
 
-  node('linux') { 
+  "agent any" {
         
-		git url: 'https://github.com/Tanya123Git/SEIS-627.git', branch: 'master'
-        stage('Build Assets') { 
+      git url: 'https://github.com/Tanya123Git/infrastructure-pipeline.git', branch: 'master	
+      
+     Stages {
+        stage('Build Application') { 
             steps {
                 echo 'Building Assets'
             }
@@ -14,7 +16,6 @@ pipeline {
                 echo 'Testing stuff...'
             }
         }
-
-        
      }
- }
+   }
+}
