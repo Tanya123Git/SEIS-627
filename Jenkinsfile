@@ -15,8 +15,8 @@ pipeline {
             }
         }
 	     
-	post {
-          always {
+	stage{('Report')
+          steps {
             junit 'test/Report.xml'
             echo "test report have been generated"
             }
