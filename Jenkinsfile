@@ -15,10 +15,10 @@ pipeline {
             }
         }
 	     
-	stage('Report')
-          steps {
-            junit 'test/Report.xml'
-            echo "test report have been generated"
+	 stage('Report') {
+           steps {
+              junit 'test/Report.xml'
+              echo "test report have been generated"
             }
         }
 	     
