@@ -2,7 +2,7 @@ pipeline {
 
   agent any
         
-    git url: 'https://github.com/Tanya123Git/infrastructure-pipeline.git', branch: 'master'
+    git url: 'https://github.com/Tanya123Git/SEIS-627.git', branch: 'master'
 	  
      stages {
         stage('Build Application') { 
