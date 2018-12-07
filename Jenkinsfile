@@ -1,10 +1,10 @@
 pipeline {
 
-  "agent any" {
+  agent ( label 'linux')
         
     git url: 'https://github.com/Tanya123Git/infrastructure-pipeline.git', branch: 'master'
 	  
-     Stages {
+     stages {
         stage('Build Application') { 
             steps {
                 echo 'Building Assets'
@@ -17,5 +17,5 @@ pipeline {
             }
         }
      }
-   }
+
 }
