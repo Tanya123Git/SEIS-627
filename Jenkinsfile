@@ -2,8 +2,8 @@ pipeline {
 
   "agent any" {
         
-      git url: 'https://github.com/Tanya123Git/infrastructure-pipeline.git', branch: 'master	
-      
+    git url: 'https://github.com/Tanya123Git/infrastructure-pipeline.git', branch: 'master'
+	  
      Stages {
         stage('Build Application') { 
             steps {
