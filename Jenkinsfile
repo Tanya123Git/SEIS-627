@@ -14,13 +14,6 @@ pipeline {
                 echo 'Testing the application'
             }
         }
-   }
-	     
-   post {
-       always {
-          junit 'build/reports/**/*.xml'
-         }
-   }
-	    
+     }    
 
 }
