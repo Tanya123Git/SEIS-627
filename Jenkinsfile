@@ -1,6 +1,6 @@
 pipeline {
 
-  agent ( label 'linux')
+  agent any
         
     git url: 'https://github.com/Tanya123Git/infrastructure-pipeline.git', branch: 'master'
 	  
