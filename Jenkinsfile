@@ -17,7 +17,7 @@ pipeline {
 	     
 	 stage('Report') {
            steps {
-              sh 'SEIS-627/test/report.xml'
+              junit 'SEIS-627/test/report/**/*.xml'
               echo "test report have been generated"
             }
         }
