@@ -5,15 +5,23 @@ pipeline {
      stages {
         stage('Build Application') { 
             steps {
-                echo 'Building Assets'
+                echo 'Building SocialConnect application'
             }
         }
 		
         stage('Test') {
             steps {
-                echo 'Testing stuff...'
+                echo 'Testing the application'
             }
         }
+	     
+	post {
+          always {
+            junit 'test/Report.xml'
+            echo "test report have been generated"
+            }
+        }
+	     
      }
 
 }
