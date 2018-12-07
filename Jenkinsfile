@@ -1,6 +1,6 @@
 pipeline {
 
-  node('linux') { 
+  agent any { 
 
     stages {
         stage('Build Assets') {
@@ -22,7 +22,6 @@ pipeline {
             echo "test report have been generated"
             }
         }
-    }
- }
-
+     }
+   }
 }
