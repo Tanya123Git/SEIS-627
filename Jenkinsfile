@@ -15,12 +15,11 @@ pipeline {
             }
         }
 	     
-	 stage('Report') {
-           steps {
-              junit 'SEIS-627/test/report/**/*.xml'
-              echo "test report have been generated"
-            }
-        }
+	post {
+          always {
+             junit 'build/reports/**/*.xml'
+           }
+       }
 	     
      }
 
